@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>Budget App</title>
+</head>
+<body>
+    <div class="budget__container">
+        <div class="budget__header">
+            <div class="budget__total">
+                <div class="total__header">Total Budget</div>
+                <div class="total__value">$0</div>
+            </div>
+            <div class="budget__category">
+                <div class="category__header">
+                    <div class="category__title">Category</div>
+                    <div class="category__nav-btn">
+                        <div class="disable-btn category__pre-btn">Previous</div>
+                        <div class="category__next-btn">Next</div>
+                    </div>
+                </div>
+                <div class="category__list">
+                    <div class="category__item">
+                        <div class="category-item__shape"><img src="./img/salary.png" alt="salary" class="category-item__image"></div>
+                        <div class="category-item__title">Salary</div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item__shape"><img src="./img/gift.png" alt="gift" class="category-item__image"></div>
+                        <div class="category-item__title">Gift</div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item__shape"><img src="./img/friend.png" alt="friend" class="category-item__image"></div>
+                        <div class="category-item__title">Friend</div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item__shape"><img src="./img/shopping.png" alt="shopping" class="category-item__image"></div>
+                        <div class="category-item__title">Shopping</div>
+                    </div>
+                    <div class="category__item">
+                        <div class="category-item__shape"><img src="./img/cooking.png" alt="cooking" class="category-item__image"></div>
+                        <div class="category-item__title">Cooking</div>
+                    </div>
+                    <div class="hide category__item category__item--add">
+                        <div class="category-item__shape"><img src="./img/invoice.png" alt="other" class="category-item__image"></div>
+                        <div class="category-item__title">Invoice</div>
+                    </div>
+                    <div class="hide category__item category__item--add">
+                        <div class="category-item__shape"><img src="./img/other.png" alt="other" class="category-item__image"></div>
+                        <div class="category-item__title">Other</div>
+                    </div>
+                </div>
+                <div class="create__list">
+                    <div class="hide category-item__create-box">
+                        <div class="category-item__create">
+                            <div class="create__header">
+                                Create new: <span class="create__title">salary</span>
+                            </div>
+                            <div class="create__form">
+                                <div class="form__input-box--half">
+                                    <input class="form__input" type="number" id="salary-amount-input" name="amount" placeholder="0">
+                                    <input class="form__input" type="text" id="salary-title-input" name="title" placeholder="Title">
+                                </div>
+                                <textarea class="form__textarea" name="description" id="salary-description-input" cols="30" rows="10"></textarea>
+                                <div class="form__input-box">
+                                    <div class="form__input-header">Choose type:</div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="salary-income-yes">
+                                        <label class="form__label" for="salary-income--yes">Is this your income?</label>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="salary-cost-yes">
+                                        <label class="form__label" for="salary-cost--yes">Is this your cost?</label>
+                                    </div>
+                                </div>
+                                <div class="form__input-box--right">
+                                    <div class="create--no">Cancel</div>
+                                    <div class="create--yes">Create one</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide category-item__create-box">
+                        <div class="category-item__create">
+                            <div class="create__header">
+                                Create new: <span class="create__title">gift</span>
+                            </div>
+                            <div class="create__form">
+                                <div class="form__input-box--half">
+                                    <input class="form__input" type="number" id="gift-amount-input" name="amount" placeholder="0">
+                                    <input class="form__input" type="text" id="gift-title-input" name="title" placeholder="Title">
+                                </div>
+                                <textarea class="form__textarea" name="description" id="gift-description-input" cols="30" rows="10"></textarea>
+                                <div class="form__input-box">
+                                    <div class="form__input-header">Choose type:</div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="gift-income-yes">
+                                        <label class="form__label" for="gift-income--yes">Is this your income?</label>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="gift-cost-yes">
+                                        <label class="form__label" for="gift-cost--yes">Is this your cost?</label>
+                                    </div>
+                                </div>
+                                <div class="form__input-box--right">
+                                    <div class="create--no">Cancel</div>
+                                    <div class="create--yes">Create one</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide category-item__create-box">
+                        <div class="category-item__create">
+                            <div class="create__header">
+                                Create new: <span class="create__title">friend</span>
+                            </div>
+                            <div class="create__form">
+                                <div class="form__input-box--half">
+                                    <input class="form__input" type="number" id="friend-amount-input" name="amount" placeholder="0">
+                                    <input class="form__input" type="text" id="friend-title-input" name="title" placeholder="Title">
+                                </div>
+                                <textarea class="form__textarea" name="description" id="friend-description-input" cols="30" rows="10"></textarea>
+                                <div class="form__input-box">
+                                    <div class="form__input-header">Choose type:</div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="friend-income-yes">
+                                        <label class="form__label" for="friend-income--yes">Is this your income?</label>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="friend-cost-yes">
+                                        <label class="form__label" for="friend-cost--yes">Is this your cost?</label>
+                                    </div>
+                                </div>
+                                <div class="form__input-box--right">
+                                    <div class="create--no">Cancel</div>
+                                    <div class="create--yes">Create one</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide category-item__create-box">
+                        <div class="category-item__create">
+                            <div class="create__header">
+                                Create new: <span class="create__title">shopping</span>
+                            </div>
+                            <div class="create__form">
+                                <div class="form__input-box--half">
+                                    <input class="form__input" type="number" id="shopping-amount-input" name="amount" placeholder="0">
+                                    <input class="form__input" type="text" id="shopping-title-input" name="title" placeholder="Title">
+                                </div>
+                                <textarea class="form__textarea" name="description" id="shopping-description-input" cols="30" rows="10"></textarea>
+                                <div class="form__input-box">
+                                    <div class="form__input-header">Choose type:</div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="shopping-income-yes" value="income">
+                                        <label class="form__label" for="shopping-income--yes">Is this your income?</label>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="shopping-cost-yes" value="cost">
+                                        <label class="form__label" for="shopping-cost--yes">Is this your cost?</label>
+                                    </div>
+                                </div>
+                                <div class="form__input-box--right">
+                                    <div class="create--no">Cancel</div>
+                                    <div class="create--yes">Create one</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide category-item__create-box">
+                        <div class="category-item__create">
+                            <div class="create__header">
+                                Create new: <span class="create__title">cooking</span>
+                            </div>
+                            <div class="create__form">
+                                <div class="form__input-box--half">
+                                    <input class="form__input--half" type="number" id="cooking-amount-input" name="amount" placeholder="0">
+                                    <input class="form__input--half" type="text" id="cooking-title-input" name="title" placeholder="Title">
+                                </div>
+                                <textarea class="form__textarea" name="description" id="cooking-description-input" cols="30" rows="10"></textarea>
+                                <div class="form__input-box">
+                                    <div class="form__input-header">Choose type:</div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="cooking-income-yes">
+                                        <label class="form__label" for="cooking-income--yes">Is this your income?</label>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="cooking-cost-yes">
+                                        <label class="form__label" for="cooking-cost--yes">Is this your cost?</label>
+                                    </div>
+                                </div>
+                                <div class="form__input-box--right">
+                                    <div class="create--no">Cancel</div>
+                                    <div class="create--yes">Create one</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide category-item__create-box">
+                        <div class="category-item__create">
+                            <div class="create__header">
+                                Create new: <span class="create__title">invoice</span>
+                            </div>
+                            <div class="create__form">
+                                <div class="form__input-box--half">
+                                    <input class="form__input--half" type="number" id="cooking-amount-input" name="amount" placeholder="0">
+                                    <input class="form__input--half" type="text" id="cooking-title-input" name="title" placeholder="Title">
+                                </div>
+                                <textarea class="form__textarea" name="description" id="cooking-description-input" cols="30" rows="10"></textarea>
+                                <div class="form__input-box">
+                                    <div class="form__input-header">Choose type:</div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="cooking-income-yes">
+                                        <label class="form__label" for="cooking-income--yes">Is this your income?</label>
+                                    </div>
+                                    <div class="form__input-group">
+                                        <input class="form__radio-input" type="radio" name="type" id="cooking-cost-yes">
+                                        <label class="form__label" for="cooking-cost--yes">Is this your cost?</label>
+                                    </div>
+                                </div>
+                                <div class="form__input-box--right">
+                                    <div class="create--no">Cancel</div>
+                                    <div class="create--yes">Create one</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hide category-item__create-box category__add">
+                        <div class="add__form">
+                            <div class="form__input-box">
+                                <div class="form__input-header">Create Your Own Category</div>
+                                <div class="form__input-group">
+                                    <input class="form__input" type="text" name="categoryName" placeholder="Category Name">
+                                </div>
+                            </div>
+                            <div class="form__input-box--right">
+                                <div class="add--no">Cancel</div>
+                                <div class="add--yes">Create one</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="budget__dashboard">
+            <div id="income">
+                <div class="income__header">Income</div>
+                <ul class="income__list">
+                    
+                </ul>
+                <ul class="incm__list-box">
+                    
+                </ul>
+            </div>
+            <div id="cost">
+                <div class="cost__header">Cost</div>
+                <ul class="cost__list">
+                    
+                </ul>
+                <ul class="cst__list-box">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
